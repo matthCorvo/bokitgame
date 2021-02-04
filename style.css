@@ -92,6 +92,9 @@ outline:none;
 color: white;
 background-color:rgb(38, 150, 38);
 }
+
+
+
 .play:hover{
   background-color:rgba(27, 104, 27, 0.884);;
 }
