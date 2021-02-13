@@ -32,21 +32,21 @@
     <div class="row">
       <div class="square">
 
-        <img src="mole.png" class="bokits" id="1">
+        <img src="mole.png" class="bokits" class="play" onmousedown="hmmm.play()" id="1">
         <img src="camion-.png" class="hole">
 
       </div>
 
       <div class="square">
 
-        <img src="mole.png" class="bokits" id="2">
+        <img src="mole.png" class="bokits " class="play" onmousedown="hmmm.play()" id="2">
         <img src="camion-.png" class="hole">
 
       </div>
 
       <div class="square">
 
-        <img src="mole.png" class="bokits" id="3">
+        <img src="mole.png" class="bokits" class="play" onmousedown="hmmm.play()" id="3">
         <img src="camion-.png" class="hole">
 
       </div>
@@ -57,21 +57,21 @@
 
     <div class="square">
 
-      <img src="mole.png" class="bokits" id="4">
+      <img src="mole.png" class="bokits" class="play" onmousedown="hmmm.play()" id="4">
       <img src="camion-.png" class="hole">
 
     </div>
 
     <div class="square">
 
-      <img src="mole.png" class="bokits" id="5">
+      <img src="mole.png" class="bokits" class="play" onmousedown="hmmm.play()" id="5">
       <img src="camion-.png" class="hole">
 
     </div>
 
     <div class="square">
 
-      <img src="mole.png" class="bokits" id="6">
+      <img src="mole.png" class="bokits" class="play" onmousedown="hmmm.play()" id="6">
       <img src="camion-.png" class="hole">
 
     </div>
@@ -81,21 +81,21 @@
 
     <div class="square">
 
-      <img src="mole.png" class="bokits" id="7">
+      <img src="mole.png" class="bokits" class="play" onmousedown="hmmm.play()" id="7">
       <img src="camion-.png" class="hole">
 
     </div>
 
     <div class="square">
 
-      <img src="mole.png" class="bokits" id="8">
+      <img src="mole.png" class="bokits" class="play" onmousedown="hmmm.play()" id="8">
       <img src="camion-.png" class="hole">
 
     </div>
 
     <div class="square">
 
-      <img src="mole.png" class="bokits" id="9">
+      <img src="mole.png" class="bokits" class="play" onmousedown="hmmm.play()" id="9">
       <img src="camion-.png" class="hole">
 
     </div>
@@ -149,7 +149,9 @@
            <script>
             var ENOUAY = new Audio();
             ENOUAY.src = 'ENOUAY.wav';</script>
-
+ <script>
+  var hmmm = new Audio();
+  hmmm.src = 'hmm.wav';</script>
 <script>
  
  //seletion des bokits
@@ -213,7 +215,7 @@ function update(){
 }
 document.querySelector(".play").addEventListener("click",function(){
   if(!interval){
-    interval=setInterval(update,900);
+    interval=setInterval(update,950);
   }
 });
 
