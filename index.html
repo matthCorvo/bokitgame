@@ -104,13 +104,18 @@
   </div>
 </div>
 <br><br>
+<div class="sound">
+  <img src="img/SOUND_ON.png" alt="" onmousedown="ENOUAY.play()" id="sound">
+</div>
 <div class="control-container">
-  <button class="play" onmousedown="ENOUAY.play()"><b>Jwe</b> (Bon lapéti*)</button>
-    <button class="reset"><b>Reset</b> (Ankò*) </button></div>
+  <button class="play" onmousedown="ENOUAY.play()" ><b>Jwe</b> (Bon lapéti*)</button>
+    <button class="reset"><b>Rejouer</b> (Ankò*) </button></div>
 
 </div>
 
 <br>
+
+
 <footer >
   <div style="text-align: center;font-size: 17px;">
       <div style="justify-content: space-between;">
@@ -141,7 +146,7 @@
           </div>
           
           <div style="color:white;">
-          © <script>document.write(new Date().getFullYear());</script> Copyright  <a href="https://matthcorvo.github.io/CORVOMatthieu-portfolioV.2/">*{Matthieu CORVO} </a>
+          © <script>document.write(new Date().getFullYear());</script> Copyright  <a href="https://matthcorvo.github.io/CORVOMatthieu-Portfolio-Professionnel-V.3/">*{Matthieu CORVO} </a>
         </div>
         </div>
         
@@ -224,6 +229,24 @@ document.querySelector(".play").addEventListener("click",function(){
 document.querySelector(".reset").addEventListener("click",function(){
   location.reload();
 });
+
+
+// SELECT SOUND ELEMENT
+const soundElement  = document.getElementById("sound");
+
+soundElement.addEventListener("click", audioManager);
+
+function audioManager(){
+    // CHANGE IMAGE SOUND_ON/OFF
+    let imgSrc = soundElement.getAttribute("src");
+    let SOUND_IMG = imgSrc == "img/SOUND_ON.png" ? "img/SOUND_OFF.png" : "img/SOUND_ON.png";
+    
+    soundElement.setAttribute("src", SOUND_IMG);
+  // MUTE AND UNMUTE SOUNDS
+  ENOUAY.muted = ENOUAY.muted ? false : true;
+  }
+
+ 
  </script>
 
 </body>
